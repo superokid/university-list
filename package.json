@@ -1,6 +1,5 @@
 {
-  "name": "with-typescript-eslint-jest",
-  "author": "@erikdstock",
+  "name": "university-list",
   "license": "MIT",
   "version": "1.0.0",
   "scripts": {
@@ -11,6 +10,7 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "husky": {
@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "formik": "^2.2.6",
     "next": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
