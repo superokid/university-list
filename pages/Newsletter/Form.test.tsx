@@ -9,9 +9,7 @@ describe('Newsletter', () => {
     expect(input.value).toBe('');
     fireEvent.change(input, { target: { value: 'rafael@gmail.com' } });
     expect(input.value).toBe('rafael@gmail.com');
-    await waitFor(() => {
-      fireEvent.click(getByText('Subscribe'));
-    });
-    // expect(input.value).toBe('');
+    await waitFor(() => fireEvent.click(getByText('Subscribe')));
+    await waitFor(() => expect(input.value).toBe(''));
   });
 });

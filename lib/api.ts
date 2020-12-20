@@ -1,9 +1,12 @@
+import axios from 'axios';
+
 export const postSubscribeEmail = async (data: string) => {
   try {
-    const res = await fetch('/api/v1/email-subscription', {
+    const res = await axios.request({
+      url: '/api/v1/email-subscription',
       method: 'POST',
-      body: data,
-    }).then((response) => response.json());
+      data,
+    });
     return { res };
   } catch (err) {
     return { err };

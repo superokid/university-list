@@ -15,4 +15,5 @@ module.exports = {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
     '^lib(.*)$': '<rootDir>/lib$1',
   },
+  setupFilesAfterEnv: ['./test/setup.ts'],
 };

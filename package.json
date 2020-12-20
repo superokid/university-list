@@ -26,7 +26,9 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "formik": "^2.2.6",
+    "msw": "^0.24.2",
     "next": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
