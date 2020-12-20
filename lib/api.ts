@@ -1,14 +1,16 @@
 import axios from 'axios';
 
-export const postSubscribeEmail = async (data: string) => {
-  try {
-    const res = await axios.request({
-      url: '/api/v1/email-subscription',
-      method: 'POST',
-      data,
-    });
-    return { res };
-  } catch (err) {
-    return { err };
-  }
+export const getNewsletterApi = () => {
+  return axios.request({
+    url: '/api/newsletter',
+    method: 'GET',
+  });
+};
+
+export const postNewsletterApi = (data: string) => {
+  return axios.request({
+    url: '/api/newsletter',
+    method: 'POST',
+    data: { email: data },
+  });
 };

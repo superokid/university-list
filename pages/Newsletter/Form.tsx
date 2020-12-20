@@ -1,6 +1,6 @@
 import { Formik, Form, Field } from 'formik';
 import { EMAIL } from './constant';
-import { postSubscribeEmail } from 'lib/api';
+import { postNewsletterApi } from 'lib/api';
 
 interface Props {}
 
@@ -11,8 +11,8 @@ const CForm: React.FC<Props> = () => {
       initialValues={{ [EMAIL]: '' }}
       onSubmit={async (values, { resetForm, setSubmitting }) => {
         setSubmitting(true);
-        const { res } = await postSubscribeEmail(values[EMAIL]);
-        if (res) {
+        const { data } = await postNewsletterApi(values[EMAIL]);
+        if (data) {
           resetForm();
           setSubmitting(false);
         }
