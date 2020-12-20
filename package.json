@@ -32,7 +32,8 @@
     "next": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "swr": "^0.3.10"
+    "swr": "^0.3.10",
+    "yup": "^0.32.8"
   },
   "devDependencies": {
     "@testing-library/react": "^10.0.1",
