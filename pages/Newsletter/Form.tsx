@@ -1,6 +1,8 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
+import Button from '@material-ui/core/Button';
 import { EMAIL, VALIDATION_SCHEMA } from './constant';
 import { postNewsletterApi } from 'lib/api';
+import { TextFieldFormik } from 'components/Form';
 
 interface Props {}
 
@@ -23,13 +25,21 @@ const CForm: React.FC<Props> = () => {
         <Form>
           <Field
             name={EMAIL}
-            aria-label="subscribe-email"
+            inputProps={{
+              'aria-label': 'subscribe-email',
+            }}
             placeholder="Email Address"
+            variant="outlined"
+            component={TextFieldFormik}
           />
-          <ErrorMessage name={EMAIL} />
-          <button type="submit" disabled={isSubmitting}>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            disabled={isSubmitting}
+          >
             Subscribe
-          </button>
+          </Button>
         </Form>
       )}
     </Formik>

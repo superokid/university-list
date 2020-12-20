@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
     "axios": "^0.21.0",
     "formik": "^2.2.6",
     "msw": "^0.24.2",

@@ -14,6 +14,9 @@ module.exports = {
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
     '^lib(.*)$': '<rootDir>/lib$1',
+    '^components(.*)$': '<rootDir>/components$1',
+    '^pages(.*)$': '<rootDir>/pages$1',
+    '^test(.*)$': '<rootDir>/test$1',
   },
   setupFilesAfterEnv: ['./test/setup.ts'],
 };
